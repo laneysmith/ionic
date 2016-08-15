@@ -42,6 +42,7 @@ angular.module('dictionaryGame', ['ionic'])
         templateUrl: "../templates/tessel.html"
       }
     }
+
   })
   .state('home.gameMode',  {
     url:"/gameMode",
