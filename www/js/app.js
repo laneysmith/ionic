@@ -35,6 +35,15 @@ angular.module('dictionaryGame', ['ionic'])
     templateUrl:"../templates/home.html"
   })
 
+  .state('home.splash', {
+    url:"/splash",
+    views: {
+      "tab-splash": {
+        templateUrl: "../templates/splash.html"
+      }
+    }
+  })
+
   .state('home.tessel',  {
     url:"/tessel",
     views: {
@@ -58,5 +67,5 @@ angular.module('dictionaryGame', ['ionic'])
   //   templateUrl: "../templates/menu-layout.html"
   // });
 
-  $urlRouterProvider.otherwise('/home/tessel')
+  $urlRouterProvider.otherwise('/home/splash')
 });
