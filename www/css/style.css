@@ -7,6 +7,10 @@
   margin-bottom:10vh;
 }
 
+.blurbCenter {
+  text-align:center;
+}
+
 .gameModeDiv {
   display:flex;
   justify-content:center;
