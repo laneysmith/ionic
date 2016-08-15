@@ -2,8 +2,11 @@ angular
   .module('dictionaryGame')
   .factory('gameFactory', function(){
     return  {
-      test: function () {
-        console.log('test')
+      newGame: (name) => {
+        return {
+          username: name,
+          gameRoom: 'Our Room'
+        }
       }
     }
   })
