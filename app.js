@@ -15,10 +15,10 @@ app.use(cors())
 
 io.on('connection', function(socket){
   console.log('A user has entered')
-  // socket.on('new-message', function(data){
-  //   console.log('server data:', data);
-  //   io.emit('recieve-message', data)
-  // })
+  socket.on('new-game', function(data){
+    console.log('server data:', data);
+    io.emit('recieve-message', data)
+  })
 })
 
 app.set('port', process.env.PORT || 5000);
