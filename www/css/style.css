@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+.title {
+  text-align:center;
+}
+
+.tesselTitle {
+  margin-bottom:10vh;
+}
+
+.gameModeDiv {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  height:65vh;
+  width:100%;
+}
+
+/*.gameModeButtons {
+  margin-bottom:20vh;
+}*/
