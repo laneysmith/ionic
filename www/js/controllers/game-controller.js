@@ -1,16 +1,4 @@
 angular
-<<<<<<< HEAD
-  .module('dictionaryGame')
-  .controller('game-controller', ['$scope', '$rootScope', 'gameFactory', 'socketFactory', function($scope, $rootScope, gameFactory, socketFactory){
-    $scope.socket = socketFactory.connect
-    $scope.newGame = function (name) {
-      $scope.socket.emit('new-game', name)
-    }
-    $scope.socket.on('recieve-message', function(data){
-      console.log(data)
-    })
-  }])
-=======
 	.module('dictionaryGame')
 	.controller('game-controller', ['$scope', '$rootScope', 'gameFactory', 'socketFactory', function($scope, $rootScope, gameFactory, socketFactory) {
 		$scope.test = gameFactory.test()
@@ -37,4 +25,3 @@ angular
 			console.log(data)
 		})
 	}])
->>>>>>> 69330bd95fb82030ed295070311d83268ce04c9e
