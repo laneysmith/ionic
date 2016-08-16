@@ -61,8 +61,8 @@ angular.module('dictionaryGame', ['ionic'])
       }
     }
   })
-  .state('home.gameRoom', {
-    url:"/gameRoom",
+  .state('home.currentGame', {
+    url:"/gameRoom/:gameId",
     views: {
       "tab-gameRoom": {
         templateUrl: "../templates/gameRoom.html"
