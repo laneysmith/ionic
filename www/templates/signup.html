@@ -5,8 +5,7 @@
         <span class="input-label">Username</span>
         <input type="text" ng-model="username">
       </label>
-      <button type="submit" class="button button-block button-positive" ng-click="newGame(username)">Create Task</button>
+      <button type="submit" class="button button-block button-positive" ui-sref="home.game({gameId: username})">Add User</button>
     </form>
   </ion-content>
 </ion-view>
-<!--  -->
