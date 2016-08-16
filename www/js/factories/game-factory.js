@@ -7,12 +7,6 @@ angular
           username: name,
           gameRoom: 'Our Room'
         }
-      },
-      getPlayers: (id) => {
-        $http.get('http://localhost:3000/gameroom/' + id)
-        .then(function(data){
-          return data
-        })
       }
     }
   }])

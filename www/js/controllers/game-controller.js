@@ -8,7 +8,7 @@ angular
       $scope.random = (Math.random() * 100000) | 0
 			var data = {
 				gameId: $scope.random,
-				hostUsername: $scope.inputHostName
+				username: $scope.inputHostName
 			}
 			$scope.socket.emit('new-game', data)
 		}
@@ -16,8 +16,9 @@ angular
 		$scope.joinGame = function() {
 			var data = {
 				gameId: $scope.inputGameId,
-				playerUsername: $scope.inputPlayerName
+				username: $scope.inputPlayerName
 			}
       $scope.socket.emit('join-game', data)
 		}
+
 	}])
