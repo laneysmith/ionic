@@ -3,12 +3,12 @@
     <p>Page 2</p>
 
     <div>
-      Welcome to room {{gameId}}!
+      Welcome to room {{gameId}}, {{player}} ({{role}})!
     </div>
      Players:
     <ul>
       <li ng-repeat="player in gameData.players">
-        {{player.username}}
+        {{player.username}} ({{player.currentRole}})
       </li>
     </ul>
 
