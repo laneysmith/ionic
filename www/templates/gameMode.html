@@ -1,8 +1,9 @@
 <ion-view>
   <ion-content class="has-header gameModeDiv" ng-controller="game-controller">
-    <button class="button button-block button-positive">JOIN A RANDOM GAME</button>
-    <button class="button button-block button-positive" ui-sref="home.signup">CREATE A NEW PRIVATE GAME</button>
-    <button class="button button-block button-positive">JOIN A PRIVATE GAME</button>
-    <button class="button button-block button-positive">JOIN A PRIVATE GAME</button>
+    <input ng-model="inputHostName" placeholder="username"/>
+    <button class="button button-block button-positive" ui-sref="home.gameRoom" ng-click="newGame()">CREATE A NEW PRIVATE GAME</button>
+    <input ng-model="inputPlayerName" placeholder="username"/>
+    <input ng-model="inputGameId" placeholder="game id"/>
+    <button class="button button-block button-positive" ui-sref="home.currentGame({ gameId: inputGameId })" ng-click="joinGame()">JOIN A PRIVATE GAME</button>
   </ion-content>
 </ion-view>
