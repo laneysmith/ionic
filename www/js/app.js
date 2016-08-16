@@ -53,14 +53,6 @@ angular.module('dictionaryGame', ['ionic', 'ngStorage'])
     }
 
   })
-  .state('home.gameMode',  {
-    url:"/gameMode",
-    views: {
-      "tab-gameMode": {
-        templateUrl: "../templates/gameMode.html"
-      }
-    }
-  })
   .state('home.signup', {
     url:"/signup",
     views: {

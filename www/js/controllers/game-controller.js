@@ -5,9 +5,8 @@ angular
     $scope.view = {}
     $scope.view.test = $stateParams.gameId
 		$scope.newGame = function() {
-      $scope.random = (Math.random() * 100000) | 0
 			var data = {
-				gameId: $scope.random,
+				gameId: (Math.random() * 100000) | 0,
 				username: $scope.inputHostName
 			}
 			$scope.socket.emit('new-game', data)

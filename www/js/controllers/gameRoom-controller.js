@@ -1,17 +1,17 @@
 angular
   .module('dictionaryGame')
-  .controller('gameRoom-controller', ['$scope','gameFactory','socketFactory', '$stateParams', '$localStorage', function($scope, gameFactory,socketFactory, $stateParams, $localStorage){
+  .controller('gameRoom-controller', ['$scope','gameFactory','socketFactory', function($scope, gameFactory,socketFactory){
     $scope.player = ''
-    $scope.gameId = $stateParams.gameId
+    $scope.gameId = 0
     $scope.gameData = {}
     $scope.socket = socketFactory.connect
+
     $scope.socket.on('player-joined', function(userData, gameData){
-      console.log('userData=', userData);
+      console.log('userData=',userData);
       $scope.gameData = gameData
-      console.log($scope.gameData);
-      $localStorage.sdUserName = userData.username
       $scope.$apply(function (){
-        $scope.player = $localStorage.sdUserName
+        $scope.gameId = userData.gameId
+        $scope.player = userData
       })
     })
   }])

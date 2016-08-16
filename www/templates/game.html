@@ -1,10 +1,11 @@
 <ion-view>
   <ion-content ng-controller="gameRoom-controller">
     <p>Page 2</p>
-    
+
     <div>
-      Welcome to room {{gameId}}, {{player}}!
+      Welcome to room {{gameId}}!
     </div>
+     Players:
     <ul>
       <li ng-repeat="player in gameData.players">
         {{player.username}}
