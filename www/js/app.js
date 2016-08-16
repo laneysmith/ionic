@@ -64,7 +64,7 @@ angular.module('dictionaryGame', ['ionic'])
   .state('home.signup', {
     url:"/signup",
     views: {
-      "tab-gameRoom": {
+      "tab-signup": {
         templateUrl: "../templates/signup.html"
       }
     }

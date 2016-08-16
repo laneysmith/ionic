@@ -1,15 +1,15 @@
 angular
 	.module('dictionaryGame')
-	.controller('game-controller', ['$scope', '$rootScope', 'gameFactory', 'socketFactory', function($scope, $rootScope, gameFactory, socketFactory) {
-		$scope.test = gameFactory.test()
+	.controller('game-controller', ['$scope', '$rootScope', 'gameFactory', 'socketFactory','$stateParams', function($scope, $rootScope, gameFactory, socketFactory, $stateParams) {
 		$scope.socket = socketFactory.connect
-
+    $scope.view = {}
+    $scope.view.test = $stateParams.gameId
 		$scope.newGame = function() {
+      $scope.random = (Math.random() * 100000) | 0
 			var data = {
-				gameId: (Math.random() * 100000) | 0,
+				gameId: $scope.random,
 				hostUsername: $scope.inputHostName
 			}
-			console.log(data);
 			$scope.socket.emit('new-game', data)
 		}
 
@@ -20,8 +20,4 @@ angular
 			}
       $scope.socket.emit('join-game', data)
 		}
-
-		$scope.socket.on('recieve-message', function(data) {
-			console.log(data)
-		})
 	}])
